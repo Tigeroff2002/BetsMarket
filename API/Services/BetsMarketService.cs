@@ -26,8 +26,8 @@
         }
 
         /// <inheritdoc/>
-        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
-            => await Task.Run(() => Task.CompletedTask);
+        protected override Task ExecuteAsync(CancellationToken stoppingToken)
+            => Task.Run(() => Task.CompletedTask, stoppingToken);
 
         private readonly ILogger<BetsMarketService> _logger;
     }
