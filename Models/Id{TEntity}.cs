@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Models;
 
-namespace Models
-{
-    internal class Id_TEntity_
-    {
-    }
-}
+/// <summary>
+/// Представляет описание абстрактного идентификатора.
+/// </summary>
+/// <typeparam name="TEntity">
+/// Тип значения.
+/// </typeparam>
+/// <param name="Value">
+/// Значение идентификатора.
+/// </param>
+public record struct Id<TEntity>(long Value);

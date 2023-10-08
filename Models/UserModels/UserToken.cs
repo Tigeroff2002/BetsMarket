@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Models.UserModels;
 
-namespace Models.UserModels
-{
-    internal class UserToken
-    {
-    }
-}
+/// <summary>
+/// Представляет класс для описания токена.
+/// </summary>
+/// <param name="Token">
+/// Токен пользователя.
+/// </param>
+public sealed record class UserToken(string Token);

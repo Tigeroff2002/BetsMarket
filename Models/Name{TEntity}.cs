@@ -1,12 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Models;
 
-namespace Models
+/// <summary>
+/// Модель описания имени сущности.
+/// </summary>
+/// <typeparam name="TEntity">
+/// Тип сущности.
+/// </typeparam>
+/// <param name="Value">
+/// Значение имени.
+/// </param>
+public record class Name<TEntity>
+    where TEntity : class
 {
-    internal class Name_TEntity_
+    public string Value { get; }
+
+    /// <summary>
+    /// Создает экземпляр <see cref="Name{TEntity}"/>.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <exception cref="ArgumentException">
+    /// Выбрасывается в случае
+    /// </exception>
+    public Name(string value)
     {
+        if (string.IsNullOrWhiteSpace(value))
+        {
+            throw new ArgumentException(nameof(value));
+        }
+
+        Value = value;
     }
 }

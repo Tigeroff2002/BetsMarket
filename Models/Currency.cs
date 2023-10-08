@@ -1,12 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Models;
 
-namespace Models
+/// <summary>
+/// Представляет тип валюты.
+/// </summary>
+public enum Currency
 {
-    internal class Currency
-    {
-    }
+    /// <summary>
+    /// Рубли.
+    /// </summary>
+    RUB,
+
+    /// <summary>
+    /// Евро.
+    /// </summary>
+    EUR,
+
+    /// <summary>
+    /// Доллары.
+    /// </summary>
+    USD
 }

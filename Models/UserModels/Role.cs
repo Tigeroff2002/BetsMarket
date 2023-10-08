@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Models.UserModels;
 
-namespace Models.UserModels
+/// <summary>
+/// Представляет роль пользователя.
+/// </summary>
+public enum Role
 {
-    internal class Role
-    {
-    }
+    /// <summary>
+    /// Пользователь.
+    /// </summary>
+    User,
+
+    /// <summary>
+    /// Администратор.
+    /// </summary>
+    Admin
 }

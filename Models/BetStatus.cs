@@ -1,12 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Models;
 
-namespace Models
+/// <summary>
+/// Представляет перечисление статусов ставки.
+/// </summary>
+public enum BetStatus
 {
-    internal class BetStatus
-    {
-    }
+    /// <summary>
+    /// Статус заключения ставки.
+    /// </summary>
+    Pending,
+
+    /// <summary>
+    /// Статус принятия ставки после оплаты.
+    /// </summary>
+    Accepted,
+
+    /// <summary>
+    /// Статус отмены ставки CWT.
+    /// </summary>
+    Denied,
+
+    /// <summary>
+    /// Статус ставки после принятия в Live.
+    /// </summary>
+    Active,
+
+    /// <summary>
+    /// Статус ставки после завершения "игры" исхода.
+    /// </summary>
+    Finsihed
 }
